@@ -1,13 +1,25 @@
 Easypartials
 ============
 
-Introduction goes here.
+EasyPartials are a way to make partials in Rails even easier!  This is
+taken from a blog post by Mike Stone at
+"http://smellsblue.blogspot.com/2009/11/easy-partials-in-rails.html".
 
 
 Example
 =======
 
-Example goes here.
+<% _my_partial :var => "123" do %>
+  <p>
+    Some block content.
+  </p>
+<% end %>
 
+The above would render a partial (as with <%= render :partial =>
+"my_partial" %>), with the local variable "var" set to "123", and the
+local variable "body" set to the paragraph "some block content", HTML
+tags included.
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Note that you need to use <% rather than <%=.
+
+Copyright (c) 2009 Noah Gibbs and Mike Stone, released under the MIT license
