@@ -1,3 +1,10 @@
+$:.unshift(File.dirname(__FILE__)) unless
+  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
+
+module Easypartials
+  VERSION = '0.0.1'
+end
+
 module ApplicationHelper
   alias_method :method_missing_without_easy_partials, :method_missing
 
