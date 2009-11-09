@@ -1,11 +1,17 @@
 History.txt
+MIT-LICENSE
 Manifest.txt
 PostInstall.txt
 README.rdoc
 Rakefile
+TODO
+init.rb
+install.rb
 lib/easypartials.rb
 script/console
 script/destroy
 script/generate
+tasks/easypartials_tasks.rake
 test/test_easypartials.rb
 test/test_helper.rb
+uninstall.rb
