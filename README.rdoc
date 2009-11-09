@@ -30,7 +30,8 @@ Note that you need to use <% rather than <%=.
 
 == REQUIREMENTS:
 
-You'll need a recent-ish version of Rails.
+You'll need a recent-ish version of Rails.  You'll also need hoe and
+newgem, but you get them automatically when you install easypartials.
 
 == INSTALL:
 
