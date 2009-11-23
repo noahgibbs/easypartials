@@ -5,13 +5,13 @@
 == DESCRIPTION:
 
 EasyPartials are a way to make partials in Rails even easier!  This is
-taken from a blog post by Mike Stone at
+an expansion of a blog post by Mike Stone at
 "http://smellsblue.blogspot.com/2009/11/easy-partials-in-rails.html".
 
-== FEATURES/PROBLEMS:
+== FEATURES:
 
 * Allows easy partial invocation syntax, with simpler local variable passing
-* Allows a shared directory for partials
+* Allows configurable shared directories for partials
 
 == SYNOPSIS:
 
@@ -27,6 +27,18 @@ local variable "body" set to the paragraph "some block content", HTML
 tags included.
 
 Note that you need to use <% rather than <%=.
+
+For a shared partial, use a line like the following in environment.rb
+or in a file under initializers:
+
+  Easypartials.shared_directories = ["mydir1", "mydir2"]
+
+This will set up app/views/mydir1 and app/views/mydir2 as the
+locations to look for partials when a directory isn't explicitly
+given.
+
+This plugin will first check the directory of the view being rendered,
+then check the shared directories in the order given.
 
 == REQUIREMENTS:
 

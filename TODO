@@ -1,4 +1,1 @@
-* Tests
-* Multiple shared directories, configurable
 * Simple "initializers"-capable configuration
-* Add "respond_to?" override
