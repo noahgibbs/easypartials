@@ -1,6 +1,4 @@
 * Tests
 * Multiple shared directories, configurable
 * Simple "initializers"-capable configuration
-* Gemify
 * Add "respond_to?" override
-* Change name of "options" to "locals" or similar

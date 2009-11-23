@@ -28,12 +28,12 @@ module ApplicationHelper
   alias_method :method_missing, :method_missing_with_easy_partials
 
   # Concat the given partial.
-  def concat_partial(partial_name, options = {}, &block)
+  def concat_partial(partial_name, locals = {}, &block)
     unless block.nil?
-      options.merge! :body => capture(&block)
+      locals.merge! :body => capture(&block)
     end
 
-    content = render :partial => partial_name, :locals => options
+    content = render :partial => partial_name, :locals => locals
     concat content
     nil
   end
