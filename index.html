@@ -1,1 +1,81 @@
-EasyPartials pages
+<h1> EasyPartials </h1>
+
+<h2> Description </h2>
+
+<p>
+  EasyPartials are a way to make partials in Rails even easier!  This
+  is an expansion of a <a href="http://smellsblue.blogspot.com/2009/11/easy-partials-in-rails.html">blog
+  post by Mike Stone</a>.
+</p>
+
+<h2> Features </h2>
+
+<ul>
+  <li> Allows easy partial invocation syntax, with simpler local variable
+    passing </li>
+  <li> Allows configurable shared directories for partials </li>
+
+<h2> Synopsis </h2>
+
+<pre>
+&lt;% _my_partial :var =&gt; "123" do %&gt;
+  &lt;p&gt;
+    Some block content.
+  &lt;/p&gt;
+&lt;% end %&gt;
+</pre>
+
+<p>
+The above would render a partial (as with <tt>&lt;%= render :partial =&gt;
+"my_partial" %&gt;), with the local variable "var" set to "123", and the
+local variable "body" set to the paragraph "some block content", HTML
+tags included.
+</p>
+
+<p>
+Note that you need to use &lt;% rather than &lt;%=.
+</p>
+
+<p>
+For a shared partial, use a line like the following in environment.rb
+or in a file under initializers:
+</p>
+
+<blockquote>
+  Easypartials.shared_directories = ["mydir1", "mydir2"]
+</blockquote>
+
+<p>
+This will set up app/views/mydir1 and app/views/mydir2 as the
+locations to look for partials when a directory isn't explicitly
+given.
+</p>
+
+<p>
+This plugin will first check the directory of the view being rendered,
+then check the shared directories in the order given.
+</p>
+
+
+<h2> Requirements </h2>
+
+<p>
+You'll need a recent-ish version of Rails.  You'll also need hoe and
+newgem, but you get them automatically when you install easypartials.
+</p>
+
+<h2> Installation </h2>
+
+<p>
+  <tt>sudo gem install easypartials</tt>
+</p>
+
+<h2> License </h2>
+
+<p>
+  The EasyPartials code here is released under the MIT license.  Mike
+  Stone's code is presumably public domain since he released it for
+  public edification without reserving any particular rights.  This
+  code is derived from his, so if it <i>isn't</i> public domain, then
+  this code will be restricted by whatever rights he reserves to it.
+</p>
